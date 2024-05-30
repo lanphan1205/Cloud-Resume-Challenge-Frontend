@@ -1,0 +1,4 @@
+h1, p.info {text-align: center;}
+h2, h3 {margin:0; display: inline;}
+h3.detail {margin:0; float: right; padding-right: 40px}
+h3.project, h4.company-description {margin:0; font-weight: normal;}
