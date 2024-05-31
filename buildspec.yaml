@@ -6,6 +6,6 @@ artifacts:
   #  get files within the dist folder only
   base-directory: '*'
   files:
-    - index.html
-    - stylesheet.css
-    - error.html
+    - ./index.html
+    - ./stylesheet.css
+    - ./error.html
