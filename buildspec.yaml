@@ -1,11 +1,22 @@
 version: 0.1
-env:
-  variables:
-    APP_ENV: 'prod'
+
+phases:
+  install:
+    commands:
+      - echo Installing NGINX
+      - sudo apt-get update
+      - sudo apt-get install nginx -y
+  build:
+    commands:
+      - echo Build started on `date`
+      - cp index.html /var/www/html/
+      - cp error.html /var/www/html/
+      - cp stylesheet.css /var/www/html/
+  post_build:
+    commands:
+      - echo Configuring NGINX
 artifacts:
-  #  get files within the dist folder only
-  base-directory: '*'
   files:
-    - /index.html
-    - /stylesheet.css
-    - /error.html
+    - /var/www/html/index.html
+    - /var/www/html/error.html
+    - /var/www/html/stylesheet.css
