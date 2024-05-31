@@ -7,4 +7,6 @@ artifacts:
   base-directory: '*'
   discard-paths: yes
   files:
-    - '*'  
+    - index.html
+    - stylesheet.css
+    - error.html
